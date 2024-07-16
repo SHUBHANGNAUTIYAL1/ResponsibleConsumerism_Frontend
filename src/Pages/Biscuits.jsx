@@ -18,7 +18,7 @@ function Biscuits() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8100/api/product/biscuit');
+        const response = await axios.get('https://responsibleconsumerism-backend.onrender.com/api/product/biscuit');
         setProducts(response.data.products);
         console.log(Products) 
       } catch (error) {
