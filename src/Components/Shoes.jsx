@@ -48,7 +48,7 @@ function Cloths() {
             <ArrowForwardIosIcon style={{ fontSize: 16 }} />
           </div>
         </div>
-        <div className='flex items-center'>
+        <div className='flex items-center justify-around'>
           {products.map((product, index) => (
             <div className="flex flex-col justify-between items-center bg-white w-[270px] p-4 shadow-md m-2 border rounded-sm border-gray-200 h-[400px]" key={index} onClick={() => handleOpen(product)}>
               <img src={product.image} alt={product.title} className="w-32 h-32 object-contain bg-white" />

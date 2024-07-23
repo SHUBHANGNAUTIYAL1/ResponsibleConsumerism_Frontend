@@ -66,7 +66,7 @@ function Chocolates() {
         <div>
           <h1 className="text-[40px] font-bold font-serif">Chocolates</h1>
         </div>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap justify-around gap-4">
           {Products.map((sale, index) => (
             <div className='px-5' key={index}>
               <div 

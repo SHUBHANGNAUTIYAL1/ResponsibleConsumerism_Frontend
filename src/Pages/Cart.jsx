@@ -12,6 +12,7 @@ function Cart() {
 
     const [selectedItem, setSelectedItem] = useState(null);
     const [products, setProducts] = useState([]);
+    const [totalOrderCost, setTotalOrderCost] = useState(0);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -19,7 +20,10 @@ function Cart() {
             try {
                 const response = await axios.get(`https://responsibleconsumerism-backend.onrender.com/api/order/user/${userId}`);
                 setProducts(response.data.orders);
-                console.log(response.data.orders);
+                const orders = response.data.orders;
+                const totalCost = orders.reduce((acc, order) => acc + order.price, 0);
+      setTotalOrderCost(totalCost);
+                console.log(totalCost);
             } catch (error) {
                 console.error("Error fetching products:", error);
             }
@@ -68,13 +72,18 @@ function Cart() {
             </div>
             <div className="flex flex-col gap-12 px-20 py-10 bg-slate-100 min-h-screen">
                 <div>
-                    <h1 className="text-[40px] font-bold font-serif">Your Cart</h1>
+                <h1 className="text-[40px] font-bold font-serif text-center my-4">
+                    Your Cart
+                    <span className="text-[32px] text-red-500 ml-2">
+                        ( Total Cost <CurrencyPoundIcon className="align-middle" /> {totalOrderCost.toFixed(2)} )
+                    </span>
+                    </h1>
                 </div>
                 <div className="flex flex-wrap gap-4">
                     {products?.map((product, index) => (
                         <div className='px-5' key={index}>
                             <div
-                                className="flex flex-col justify-between items-center bg-white w-[270px] p-4 shadow-md m-2 border rounded-sm border-gray-200 h-[400px]"
+                                className="flex flex-col justify-between items-center bg-white w-[270px] p-4 shadow-md m-2 border rounded-sm border-gray-200 h-[450px]"
                             >
                                 <img src={product.image} alt={product.name} className="w-32 h-32 object-contain bg-white" />
                                 <h2 className="text-lg font-semibold mt-2">{product.name}</h2>
@@ -83,6 +92,13 @@ function Cart() {
                                 <div className="flex justify-center mt-2">
                                     {renderStars(product.rating)}
                                 </div>
+                                <div className='flex flex-col justify-center w-full'>
+                                    <h3 className='text-center'>Sustainability</h3>
+                                    <div className='flex gap-2 w-full justify-center'>
+                                        <img src={product.label1} className="h-[40px] w-[40px]" alt="" />
+                                        <img src={product.label2} className="h-[40px] w-[40px]" alt="" />
+                                    </div>
+                                    </div>
                                 <button
                                     className="bg-blue-600 text-white rounded-md px-4 py-2 mt-4 mx-auto block hover:bg-blue-700"
                                     onClick={() => handleRemove(product._id, product.name)}

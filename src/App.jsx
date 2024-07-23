@@ -12,6 +12,7 @@ import ConsentPage from './Pages/ConsentPage'
 import Cart from './Pages/Cart'
 import Questionnaire from './Pages/Questionnaire'
 import Coffee from './Pages/Coffee'
+import InformationSheet from './Pages/InformationSheet'
 
 
 
@@ -19,7 +20,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<ConsentPage/>}/>
+        <Route path="/" element={<InformationSheet/>}/>
+        <Route path="/consent" element={<ConsentPage/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/market" element={<Market />} />
         <Route path="/register" element={<Register />} />
