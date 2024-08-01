@@ -18,10 +18,12 @@ const ConsentPage = () => {
 
   return (
     <div className="flex flex-col  items-center min-h-screen bg-gray-100 p-4">
-      <div className="flex w-full h-[100px] mb-10 rounded-2xl shadow-lg  mt-10 px-8 bg-gray-200 items-center text-black space-x-8 py-10">
-        <img src={logo} className="h-[70px] w-[70px]" alt="Logo" />
-        <h1 className="font-bold text-[26px]">Study for Human Behaviour in Shopping Interfaces</h1>
+     <div className="px-5 h-[100px] w-full mb-10 mt-4 flex justify-center items-center bg-gray-100">
+      <div className="flex w-full h-full px-8 items-center bg-gray-200 text-black shadow-md">
+        <img src={logo} className='h-[70px] w-[70px] mr-4' alt="logo" />
+        <h1 className="font-semibold text-center flex-1 text-[26px]">Study for Human Behaviour in Shopping Interfaces</h1>
       </div>
+    </div>
       <div className="bg-white p-8 rounded shadow-lg max-w-3xl w-full">
         <h1 className="text-2xl font-bold mb-4 text-center">Consent to Participate in Research</h1>
         <ul className="list-disc list-inside mb-4 space-y-2">
