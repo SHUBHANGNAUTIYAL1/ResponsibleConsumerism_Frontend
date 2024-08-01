@@ -68,7 +68,7 @@ function Biscuit() {
   };
 
   return (
-    <div className="w-full h-[500px] flex flex-col mt-5 px-5 mb-5">
+    <div className="w-full h-[500px] flex flex-col mt-5 px-5 mb-20">
       <div className='flex flex-col gap-4 p-5 bg-white shadow-md'>
         <div className="flex items-center justify-between">
           <h1 className="font-bold text-[24px]">Biscuits And Cookies</h1>
@@ -78,7 +78,7 @@ function Biscuit() {
         </div>
         <div className='flex items-center justify-around'>
           {products.map((product, index) => (
-            <div className="flex flex-col justify-between items-center bg-white w-[270px] p-4 shadow-md m-2 border rounded-sm border-gray-200 h-[400px]" key={index} onClick={() => handleOpen(product)}>
+            <div className="flex flex-col justify-between items-center bg-white w-[290px] p-4 shadow-md m-2 border rounded-sm border-gray-200 h-[430px]" key={index} onClick={() => handleOpen(product)}>
               <img src={product.image} alt={product.title} className="w-32 h-32 object-contain bg-white" />
               <h2 className="text-lg font-semibold mt-2 text-center">{product.name}</h2>
               <p className="text-sm text-gray-500 text-center">{product.desc}</p>

@@ -63,7 +63,8 @@ function ItemModal({ open, handleClose, item }) {
         };
 
         await axios.post('https://responsibleconsumerism-backend.onrender.com/api/logs/create', logData);
-        fetchOrders(); // Refresh orders after adding a new item
+        fetchOrders();
+        window.location.reload(); // Refresh orders after adding a new item
       } catch (error) {
         console.error('Error creating order:', error);
       }

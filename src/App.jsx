@@ -14,6 +14,7 @@ import Questionnaire from './Pages/Questionnaire'
 import Coffee from './Pages/Coffee'
 import InformationSheet from './Pages/InformationSheet'
 import LoginForm from './Pages/LoginForm'
+import ThankYou from './Pages/Thankyou'
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/feed" element={<Questionnaire/>}/>
         <Route path="/coffee" element={<Coffee/>}/>
+        <Route path="/thankyou" element={<ThankYou/>}/>
         
 
       </Routes>
