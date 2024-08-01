@@ -77,6 +77,14 @@ function Coffee() {
                 <h2 className="text-lg font-semibold mt-2">{sale.name}</h2>
                 <p className="text-sm text-gray-500">{sale.desc}</p>
                 <p className="text-lg font-bold mt-2"><CurrencyPoundIcon/>{sale.price}</p>
+                <div className='text-sm text-gray-500 text-center flex items-center justify-center font-bold gap-2'><p>Ethical Score :</p> <div className="h-[30px] w-[30px] flex items-center justify-center rounded-full text-white bg-green-600">{sale.score}</div></div>
+              <div className='flex flex-col justify-center w-full'>
+                <h3 className='text-center'>Sustainability</h3>
+                <div className='flex gap-2 w-full justify-center'>
+                  <img src={sale.label1} className="h-[40px] w-[40px]" alt="" />
+                  <img src={sale.label2} className="h-[40px] w-[40px]" alt="" />
+                </div>
+                </div>
               </div>
             </div>
           ))}

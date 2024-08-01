@@ -8,12 +8,12 @@ const Login = () => {
   localStorage.clear();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: '',
+    
     age: '',
     sex: '',
     occupation: '',
     shoppingFrequency: '',
-    role: 'Buyer',
+    
   });
 
   const handleChange = (e) => {
@@ -27,13 +27,11 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://responsibleconsumerism-backend.onrender.com/api/auth/login', formData);
+      const response = await axios.post('https://responsibleconsumerism-backend.onrender.com/api/auth/register', formData);
       localStorage.setItem('user', JSON.stringify(response.data));
-      if (response.data.role === 'Buyer') {
+  
         navigate('/market');
-      } else {
-        navigate('/inventory');
-      }
+      
     } catch (error) {
       console.error('Error logging in:', error);
     }
@@ -43,22 +41,15 @@ const Login = () => {
     <div
       className="min-h-screen w-full flex flex-col items-center bg-gray-100"
       >
-       <div className="flex w-full h-full mb-10 rounded-2xl mt-0 shadow-lg justify-center px-8 bg-white items-center text-black space-x-8 py-10">
+       <div className="flex w-full h-[100px] mb-10 rounded-2xl  shadow-lg mt-10 px-8 bg-gray-200 items-center text-black space-x-8 py-10">
        <img src={logo} className='h-[70px] w-[70px]' />
-       <h1 className="font-bold    text-[26px]">Study for Responsible Consumerism - Developing Ethical and Socially Responsible Shopping Interfaces</h1>
+       <h1 className="font-bold    text-[26px]">Study for Human Behaviour in Shopping Interfaces</h1>
     </div>
       <div className="bg-white p-10 rounded-2xl shadow-xl shadow-black bg-opacity-80">
         <h1 className="leading-[72px] space-grotesk text-[50px] font-semibold text-center text-black mb-4">Enter Your Details</h1>
         <p className="text-[20px] text-center text-white mb-8">Ready to Enhance Your Shopping Experience?</p>
         <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border-2  outline-none text-black bg-gray-100 border-black placeholder-black focus:outline-none  "
-          />
+          
           <input
             type="number"
             name="age"
@@ -111,7 +102,7 @@ const Login = () => {
             Login
           </button>
         </form>
-        <p className="mt-4 text-[16px] text-center text-black">New User? <a href="/register" className="text-blue-500 underline">Sign Up</a></p>
+        
       </div>
     </div>
   );

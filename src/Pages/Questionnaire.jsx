@@ -50,9 +50,9 @@ function Questionnaire() {
 
   return (
     <div className="flex flex-col items-center p-2 bg-gray-100">
-       <div className="flex w-full h-full mb-10 rounded-2xl mt-0 shadow-lg justify-center px-8 bg-white items-center text-black space-x-8 py-10">
-        <img src={logo} className='h-[70px] w-[70px]' />
-        <h1 className="font-bold text-[26px]">Study for Responsible Consumerism - Developing Ethical and Socially Responsible Shopping Interfaces</h1>
+      <div className="flex w-full h-[100px] mb-10 rounded-2xl shadow-lg  mt-10 px-8 bg-gray-200 items-center text-black space-x-8 py-10">
+        <img src={logo} className="h-[70px] w-[70px]" alt="Logo" />
+        <h1 className="font-bold text-[26px]">Study for Human Behaviour in Shopping Interfaces</h1>
       </div>
       <h1 className="text-3xl font-bold mb-6">Questionnaire</h1>
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-full max-w-4xl">

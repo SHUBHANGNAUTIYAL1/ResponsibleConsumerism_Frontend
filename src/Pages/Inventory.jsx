@@ -44,7 +44,7 @@ function Inventory() {
 
     return (
         <div className="flex flex-col ">
-            <Navbar />
+            
             <div className="flex flex-col gap-12 px-20 py-10">
                 <div className='flex justify-between items-center'>
                     <h1 className="text-[40px] font-bold font-serif">Your Inventory</h1>

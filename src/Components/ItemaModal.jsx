@@ -6,7 +6,7 @@ function ItemModal({ open, handleClose, item }) {
   const [totalOrderCost, setTotalOrderCost] = useState(0);
 
   const user = JSON.parse(localStorage.getItem('user'));
-  const userId = user._id;
+  const userId = user.newUser._id;
   const purchaseLimit = 50; // Purchase limit
 
   useEffect(() => {
@@ -50,6 +50,7 @@ function ItemModal({ open, handleClose, item }) {
           rating: item.rating,
           label1: item.label1,
           label2: item.label2,
+          score:item.score,
         };
 
         const response = await axios.post('https://responsibleconsumerism-backend.onrender.com/api/order/create-order', orderData);
@@ -87,6 +88,7 @@ function ItemModal({ open, handleClose, item }) {
         <div className="flex justify-center mt-2">
           {renderStars(item.rating)}
         </div>
+        <div className='text-sm text-gray-500 text-center flex items-center justify-center font-bold gap-2'><p>Ethical Score :</p> <div className="h-[30px] w-[30px] flex items-center justify-center rounded-full text-white bg-green-600">{item.score}</div></div>
         <div className='flex flex-col justify-center w-full'>
           <h3 className='text-center'>Sustainability</h3>
           <div className='flex gap-2 w-full justify-center'>

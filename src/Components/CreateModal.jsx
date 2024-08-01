@@ -8,6 +8,7 @@ function CreateModal({ setOpen }) {
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
   const [stock, setStock] = useState('');
+  const [score,setScore]=useState('');
   const [type, setType] = useState('');
   const [rating, setRating] = useState('');
   const [label1, setLabel1] = useState(' ');
@@ -34,6 +35,7 @@ function CreateModal({ setOpen }) {
       price: Number(price),
       stock: Number(stock),
       rating: Number(rating),
+      score:Number(score),
       producttype: type,
       label1,
       label2,
@@ -112,6 +114,8 @@ function CreateModal({ setOpen }) {
           onChange={(e) => setRating(e.target.value)}
           className="w-full p-2 mb-4 border rounded"
         />
+       
+       
         <input
           type="text"
           placeholder="Label 1"
@@ -119,11 +123,19 @@ function CreateModal({ setOpen }) {
           onChange={(e) => setLabel1(e.target.value)}
           className="w-full p-2 mb-4 border rounded"
         />
+         
         <input
           type="text"
           placeholder="Label 2"
           value={label2}
           onChange={(e) => setLabel2(e.target.value)}
+          className="w-full p-2 mb-4 border rounded"
+        />
+         <input
+          type="number"
+          placeholder="Ethical Score"
+          value={score}
+          onChange={(e) => setScore(e.target.value)}
           className="w-full p-2 mb-4 border rounded"
         />
         <select

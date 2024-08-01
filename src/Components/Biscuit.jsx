@@ -68,7 +68,7 @@ function Biscuit() {
   };
 
   return (
-    <div className="w-full h-[500px] flex flex-col px-5 mb-5">
+    <div className="w-full h-[500px] flex flex-col mt-5 px-5 mb-5">
       <div className='flex flex-col gap-4 p-5 bg-white shadow-md'>
         <div className="flex items-center justify-between">
           <h1 className="font-bold text-[24px]">Biscuits And Cookies</h1>
@@ -83,6 +83,14 @@ function Biscuit() {
               <h2 className="text-lg font-semibold mt-2 text-center">{product.name}</h2>
               <p className="text-sm text-gray-500 text-center">{product.desc}</p>
               <p className="text-lg font-bold mt-2"><CurrencyPoundIcon/> {product.price}</p>
+              <div className='text-sm text-gray-500 text-center flex items-center justify-center font-bold gap-2'><p>Ethical Score :</p> <div className="h-[30px] w-[30px] flex items-center justify-center rounded-full text-white bg-green-600">{product.score}</div></div>
+              <div className='flex flex-col justify-center w-full'>
+                <h3 className='text-center'>Sustainability</h3>
+                <div className='flex gap-2 w-full justify-center'>
+                  <img src={product.label1} className="h-[40px] w-[40px]" alt="" />
+                  <img src={product.label2} className="h-[40px] w-[40px]" alt="" />
+                </div>
+        </div>
             </div>
           ))}
         </div>

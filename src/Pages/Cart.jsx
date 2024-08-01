@@ -8,7 +8,7 @@ import Research from '../Components/Research';
 
 function Cart() {
     const user = JSON.parse(localStorage.getItem('user'));
-    const userId = user._id;
+    const userId = user.newUser._id;
 
     const [selectedItem, setSelectedItem] = useState(null);
     const [products, setProducts] = useState([]);
