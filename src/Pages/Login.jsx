@@ -31,7 +31,7 @@ const Login = () => {
     try {
       const response = await axios.post('https://responsibleconsumerism-backend.onrender.com/api/auth/register', formData);
       localStorage.setItem('user', JSON.stringify(response.data));
-      navigate('/market');
+      navigate('/gift');
     } catch (error) {
       console.error('Error logging in:', error);
     }

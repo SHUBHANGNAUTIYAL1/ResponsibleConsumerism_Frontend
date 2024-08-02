@@ -36,8 +36,7 @@ function Questionnaire() {
     setResponses(newResponses);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     try {
       await axios.post('https://responsibleconsumerism-backend.onrender.com/api/questionnaire/create', { userId, responses });
       alert('Responses submitted successfully!');
@@ -61,7 +60,7 @@ function Questionnaire() {
         </div>
       </div>
       <h1 className="text-3xl font-bold mb-6">Post Survey Questions</h1>
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-full max-w-4xl">
+      <div className="bg-white p-6 rounded shadow-md w-full max-w-4xl">
         {currentQuestions.map((question, index) => (
           <div key={startIndex + index} className="mb-6">
             <p className="mb-2 font-semibold">{`${startIndex + index + 1}. ${question}`}</p>
@@ -101,14 +100,15 @@ function Questionnaire() {
             </button>
           ) : (
             <button
-              type="submit"
+              type="button"
+              onClick={handleSubmit}
               className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
             >
               Submit
             </button>
           )}
         </div>
-      </form>
+      </div>
     </div>
   );
 }

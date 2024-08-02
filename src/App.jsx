@@ -15,6 +15,7 @@ import Coffee from './Pages/Coffee'
 import InformationSheet from './Pages/InformationSheet'
 import LoginForm from './Pages/LoginForm'
 import ThankYou from './Pages/Thankyou'
+import BirthdayGift from './Pages/BirthdayGift'
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/feed" element={<Questionnaire/>}/>
         <Route path="/coffee" element={<Coffee/>}/>
         <Route path="/thankyou" element={<ThankYou/>}/>
+        <Route path="/gift" element={<BirthdayGift/>}/>
         
 
       </Routes>
