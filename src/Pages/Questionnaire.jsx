@@ -60,7 +60,7 @@ function Questionnaire() {
           <h1 className="font-semibold text-center flex-1 text-[26px]">Study for Human Behaviour in Shopping Interfaces</h1>
         </div>
       </div>
-      <h1 className="text-3xl font-bold mb-6">Questionnaire</h1>
+      <h1 className="text-3xl font-bold mb-6">Post Survey Questions</h1>
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-full max-w-4xl">
         {currentQuestions.map((question, index) => (
           <div key={startIndex + index} className="mb-6">

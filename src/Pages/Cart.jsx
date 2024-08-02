@@ -83,7 +83,7 @@ function Cart() {
                     {products?.map((product, index) => (
                         <div className='px-5' key={index}>
                             <div
-                                className="flex flex-col justify-between items-center bg-white w-[270px] p-4 shadow-md m-2 border rounded-sm border-gray-200 h-[450px]"
+                                className="flex flex-col justify-between items-center bg-white w-[290px] p-4 shadow-md m-2 border rounded-sm border-gray-200 h-[500px]"
                             >
                                 <img src={product.image} alt={product.name} className="w-32 h-32 object-contain bg-white" />
                                 <h2 className="text-lg font-semibold mt-2">{product.name}</h2>

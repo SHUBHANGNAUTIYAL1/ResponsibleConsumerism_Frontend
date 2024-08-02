@@ -14,7 +14,7 @@ function ThankYou() {
         </div>
       </div>
       <h1 className="text-4xl font-bold text-blue-600 mb-6">Thank You!</h1>
-      <p className="text-xl mb-4">Thank you for participating in the survey</p>
+      <p className="text-xl mb-4">for participating in the survey</p>
     
     </div>
   );

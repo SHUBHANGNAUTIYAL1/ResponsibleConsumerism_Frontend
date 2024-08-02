@@ -77,7 +77,7 @@ const Login = () => {
             <option value="" disabled>Occupation (working, student, etc.)</option>
             <option value="student">Student</option>
             <option value="working">Working</option>
-            <option value="others">Others</option>
+            <option value="retired">retired</option>
             <option value="others">Others</option>
           </select>
           <select

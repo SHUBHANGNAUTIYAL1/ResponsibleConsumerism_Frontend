@@ -71,7 +71,7 @@ function Chocolates() {
             <div className='px-5' key={index}>
               <div 
                 onClick={() => handleOpen(sale)} 
-                className="flex flex-col justify-between items-center bg-white w-[290px] p-4 shadow-md m-2 border rounded-sm border-gray-200 h-[430px]"
+                className="flex flex-col justify-between items-center bg-white w-[290px] p-4 shadow-md m-2 border rounded-sm border-gray-200 h-[450px]"
               >
                 <img src={sale.image} alt={sale.title} className="w-32 h-32 object-contain bg-white" />
                 <h2 className="text-lg font-semibold mt-2">{sale.name}</h2>
