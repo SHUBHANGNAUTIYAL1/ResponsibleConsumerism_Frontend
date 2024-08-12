@@ -16,6 +16,7 @@ import InformationSheet from './Pages/InformationSheet'
 import LoginForm from './Pages/LoginForm'
 import ThankYou from './Pages/Thankyou'
 import BirthdayGift from './Pages/BirthdayGift'
+import Graphs from './Pages/Graphs'
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/coffee" element={<Coffee/>}/>
         <Route path="/thankyou" element={<ThankYou/>}/>
         <Route path="/gift" element={<BirthdayGift/>}/>
+        <Route path="/graph" element={<Graphs/>}/>
         
 
       </Routes>

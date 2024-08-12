@@ -12,13 +12,16 @@ const questions = [
   "It was easy to find the information I needed.",
   "The information was effective in helping me complete the tasks and scenarios.",
   "The organization of information on the system screens was clear.",
+  "I will not buy a product if I know that the company that sells it is socially irresponsible.",
+  " I have paid more for socially responsible products when there is a cheaper alternative", 
   "The information was effective in helping me complete the tasks and scenarios.",
   "The interface of this system was pleasant.",
   "This system has all the functions and capabilities I expect it to have.",
   "I did not encounter any crashes or significant downtime while using the website.",
   "The system responded quickly to my inputs and actions.",
   "I would recommend this system to others based on my experience.",
-  "Overall, I am satisfied with this system."
+  "Overall, I am satisfied with this system.",
+
 ];
 
 const scaleLabels = ["Strongly Agree", "1", "2", "3", "4", "5", "6", "Strongly Disagree", "N/A"];
